@@ -1,8 +1,8 @@
 nsc add account -n SYS
 nsc edit operator --system-account SYS
-nsc edit operator --account-jwt-server-url nats://localhost:4222
-#conns not supported yet nsc add account Buses --allow-pub "FG.FGLA.*" --conns 50000
+nsc edit operator --account-jwt-server-url nats://nats:4222 
 nsc add account Buses --allow-pub "FG.FGLA.*"
+nsc edit account Buses --conns 50000
 nsc add account WebClients --allow-sub "FG.FGLA.*"
 
 nsc add export --account "Buses" --subject "FG.FGLA.*" --name "updates" --account-token-position 0
