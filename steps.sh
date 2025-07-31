@@ -1,5 +1,5 @@
-nsc add account -n SYS
-nsc edit operator --system-account SYS
+#press enter for all options that come up
+nsc init
 nsc edit operator --account-jwt-server-url nats://nats:4222 
 nsc add account Buses --allow-pub "FG.FGLA.*"
 nsc edit account Buses --conns 50000
